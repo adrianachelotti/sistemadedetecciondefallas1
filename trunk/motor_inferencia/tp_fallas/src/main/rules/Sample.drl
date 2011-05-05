@@ -2,19 +2,24 @@ package com.sample
  
 import com.sample.DroolsTest.Message;
  
-rule "Hello World"
+rule "DIAGNOSTICO 1"
 	when
-		m : Message( status == Message.HELLO, myMessage : message )
+		m : Message( resp1 ==  Message.SI && resp2 == Message.NO, myMessage : message )
 	then
-		System.out.println( myMessage ); 
-		m.setMessage( "Goodbye cruel world" );
-		m.setStatus( Message.GOODBYE );
-		update( m );
+		System.out.println( "DIAGNOSTICO 1" );
 end
 
-rule "GoodBye"
+rule "DIAGNOSTICO 2"
 	when
-		Message( status == Message.GOODBYE, myMessage : message )
+		m : Message( resp1 ==  Message.SI && resp2 == Message.SI, myMessage : message )
 	then
-		System.out.println( myMessage );
+		System.out.println( "DIAGNOSTICO 2" );
+end
+
+rule "DIAGNOSTICO 3"
+	when
+		m : Message( resp1 ==  Message.SI && resp3 == Message.SI && resp4 == Message.SI 
+		&& resp5 == Message.SI, myMessage : message )
+	then
+		System.out.println( "DIAGNOSTICO 3" );
 end
