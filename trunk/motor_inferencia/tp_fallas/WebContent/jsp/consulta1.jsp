@@ -18,7 +18,7 @@
 					</td>
 					<td width="10">		</td>
 				</tr>	
-				<tr><input type="button" value="DIAGNOSTICAR" onClick="window.location.href='DiagnosticarAction'"></tr>					
+				<tr><input type="button" value="DIAGNOSTICAR" onClick="window.location.href='DiagnosticarAction'" /></tr>					
 			</table>	
 	</div>
 

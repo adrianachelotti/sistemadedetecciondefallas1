@@ -12,7 +12,7 @@
 					<td width="10">		</td>
 					<td colspan="2" align="center" valign="middle">
 						<div" >
-							<img src="cerebrolocura.jpg">
+							<img src="../cerebrolocura.jpg">
 						</div>
 					</td>
 					<td colspan="2" height="500" align="center">
