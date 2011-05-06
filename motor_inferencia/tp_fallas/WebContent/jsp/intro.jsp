@@ -1,13 +1,25 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"    pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="s" uri="/struts-tags" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Sistema Experto</title>
-</head>
-	<body>
-		<span >Bienvenido a nuestro Sistema Experto en Trastornos Mentales debido a Enfermedades Médicas.</span>
-			<a href="HomeAction">saltar</a>		
-	</body>
-</html>
+
+<body style="text-align: center;">
+	<div style="background-color:navy; width: 1000; height:6400 ;" >
+		<div style="height: 1000;">
+			<form action="HomeAction">
+				<table height="800">
+					<tr>
+						<td>
+							<div align="center">
+								<span  style="font: bold; color: gray; font-size-adjust: inherit;font-size: large; text-align: center; ">SISTEMA EXPERTO <br> DIAGNOSTICO DE TRASTORNOS MENTALES DEBIDO A ENFERMEDADES MEDICAS</span>	
+							</div>
+							<div align="center">
+								<br><br>
+								<input type="submit" value="ENTRAR">
+								<br>
+							</div>
+						</td>
+					</tr>
+				</table>						
+			</form>
+		</div>
+	
+	</div>
+
+</body>
