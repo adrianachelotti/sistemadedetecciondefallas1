@@ -11,14 +11,10 @@
 				<tr>
 					<td width="10">		</td>
 					<td>
-						<span>¿Ha tenido usted alteraciones en la conciencia?</span>
-						<p>
-						<input type="radio" name="respuesta" value="si_1" />SI
-						<input type="radio" name="respuesta" value="no_1" />NO						
+						<span>ESTE ES EL DIAGNOSTICO</span>				
 					</td>
 					<td width="10">		</td>
-				</tr>	
-				<tr><input type="button" value="DIAGNOSTICAR" onClick="window.location.href='DiagnosticarAction'"></tr>					
+				</tr>				
 			</table>	
 	</div>
 
