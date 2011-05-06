@@ -2,7 +2,7 @@ package action;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-import drools.*;
+import drools.MotroInferenciaDrools;
 
 @SuppressWarnings("serial")
 public class DiagnosticarAction extends ActionSupport{

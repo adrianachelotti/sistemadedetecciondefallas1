@@ -15,7 +15,7 @@ import org.drools.runtime.StatefulKnowledgeSession;
 /**
  * This is a sample class to launch a rule.
  */
-public final class MotroInferenciaDrools {
+public class MotroInferenciaDrools {
 
 	public void diagnosticar(int[] respuestas) {
 		//Respuesta a todas las preguntas... (se tienen que inicializar en 0 simpre)
