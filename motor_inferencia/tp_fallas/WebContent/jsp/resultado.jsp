@@ -1,3 +1,5 @@
+<% String resultado=(String) session.getAttribute("resultado"); %>
+
 <body style="width: 300;" >
 	<div style="background-color:navy; border-color: white; border: 1; border-style: solid;"  align="center" >
 			<div>
@@ -10,7 +12,7 @@
 				<tr>
 					<td width="10">		</td>
 					<td>
-						<span>ESTE ES EL DIAGNOSTICO</span>				
+						<span>RESULTADO: <%=resultado%></span>				
 					</td>
 					<td width="10">		</td>
 				</tr>				

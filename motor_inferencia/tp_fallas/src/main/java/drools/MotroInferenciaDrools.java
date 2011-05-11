@@ -28,6 +28,7 @@ public class MotroInferenciaDrools {
 			// go !
 			Message message = new Message();
 			message.setRespuestas(respuestas);
+			message.setMessage("No hay suficiente información para realizar un diagnóstico");
 			ksession.insert(message);
 			ksession.fireAllRules();
 			logger.close();
