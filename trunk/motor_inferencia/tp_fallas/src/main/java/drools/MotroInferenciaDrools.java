@@ -17,7 +17,7 @@ import org.drools.runtime.StatefulKnowledgeSession;
  */
 public class MotroInferenciaDrools {
 
-	public void diagnosticar(int[] respuestas) {
+	public String diagnosticar(int[] respuestas) {
 		//Respuesta a todas las preguntas... (se tienen que inicializar en 0 simpre)
 		
 		try {
@@ -31,8 +31,10 @@ public class MotroInferenciaDrools {
 			ksession.insert(message);
 			ksession.fireAllRules();
 			logger.close();
+			return (message.getMessage());
 		} catch (Throwable t) {
 			t.printStackTrace();
+			return ("ERROR");
 		}
 	}
 
@@ -44,7 +46,7 @@ public class MotroInferenciaDrools {
 			for (KnowledgeBuilderError error: errors) {
 				System.err.println(error);
 			}
-			throw new IllegalArgumentException("Could not parse knowledge.");
+			throw new IllegalArgumentException("No se pudo obtener el Conocimiento");
 		}
 		KnowledgeBase kbase = KnowledgeBaseFactory.newKnowledgeBase();
 		kbase.addKnowledgePackages(kbuilder.getKnowledgePackages());

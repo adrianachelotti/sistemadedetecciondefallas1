@@ -1,4 +1,3 @@
-
 <body style="width: 300;" >
 	<div style="background-color:navy; border-color: white; border: 1; border-style: solid;"  align="center" >
 			<div>
@@ -17,5 +16,4 @@
 				</tr>				
 			</table>	
 	</div>
-
 </body>
