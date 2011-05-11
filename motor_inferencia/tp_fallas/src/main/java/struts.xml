@@ -8,7 +8,7 @@
                   <result>/jsp/consulta1.jsp</result>                           
             </action>
             <action name="DiagnosticarAction" class="action.DiagnosticarAction">
-                  <result>/jsp/resultado.jsp</result>                           
+                  <result>/jsp/resultado.jsp</result>                        
             </action>           
       </package>
 </struts>
