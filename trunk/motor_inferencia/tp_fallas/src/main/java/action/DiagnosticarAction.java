@@ -1,15 +1,15 @@
 package action;
 
-import org.apache.struts2.interceptor.SessionAware;
-import org.omg.CORBA.Request;
+import java.util.Map;
 
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
-
 import drools.MotroInferenciaDrools;
 
 @SuppressWarnings("serial")
 public class DiagnosticarAction extends ActionSupport{
 	
+	@SuppressWarnings("unchecked")
 	public String execute(){
 		MotroInferenciaDrools mt = new MotroInferenciaDrools();
 		int[] resps = new int[16];
@@ -27,7 +27,10 @@ public class DiagnosticarAction extends ActionSupport{
 		resps[7] = 0;
 			
 		String resultado = mt.diagnosticar(resps);
-		System.out.println(resultado);
+		//aca se tiene que pasar al jsp
+		@SuppressWarnings("rawtypes")
+		Map session = ActionContext.getContext().getSession();
+        session.put("resultado", resultado);
 		return "success";
 	}
 }

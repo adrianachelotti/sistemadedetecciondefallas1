@@ -6,14 +6,14 @@ rule "DIAGNOSTICO 1"
 	when
 		m : Message( resp1 ==  Message.SI && resp2 == Message.NO, myMessage : message )
 	then
-		m.setMessage("DIAGNOSTICO 1");
+		m.setMessage("Delirium debido a una enfermedad medica");
 end
 
 rule "DIAGNOSTICO 2"
 	when
 		m : Message( resp1 ==  Message.SI && resp2 == Message.SI, myMessage : message )
 	then
-		m.setMessage("DIAGNOSTICO 2");
+		m.setMessage("Delirium debido a multiples etiologias");
 end
 
 rule "DIAGNOSTICO 3"
@@ -21,7 +21,7 @@ rule "DIAGNOSTICO 3"
 		m : Message( resp1 == Message.NO && resp3 == Message.SI && resp4 == Message.SI 
 		          && resp5 == Message.SI, myMessage : message )
 	then
-		m.setMessage("DIAGNOSTICO 3");
+		m.setMessage("Delirium debido a multiples etiologias");
 end
 
 rule "DIAGNOSTICO 4"
@@ -29,7 +29,7 @@ rule "DIAGNOSTICO 4"
 		m : Message( resp1 == Message.NO && resp3 == Message.SI && resp4 == Message.SI 
 		          && resp5 == Message.NO && resp6 == Message.SI, myMessage : message )
 	then
-		m.setMessage("DIAGNOSTICO 4");
+		m.setMessage("Demencia Vascular");
 end
 
 rule "DIAGNOSTICO 5"
@@ -38,7 +38,7 @@ rule "DIAGNOSTICO 5"
 		          && resp5 == Message.NO && resp6 == Message.NO && resp7 == Message.SI, 
 		          myMessage : message )
 	then
-		m.setMessage("DIAGNOSTICO 5");
+		m.setMessage("Demencia debida a una enfermedad medica");
 end
 
 rule "DIAGNOSTICO 6"
@@ -47,7 +47,7 @@ rule "DIAGNOSTICO 6"
 				  && resp5 == Message.NO && resp6 == Message.NO && resp7 == Message.NO
 				  && resp8 == Message.SI, myMessage : message )
 	then
-		m.setMessage("DIAGNOSTICO 6");
+		m.setMessage("Demencia tipo Alzheimer");
 end
 
 rule "DIAGNOSTICO 7"
@@ -56,19 +56,19 @@ rule "DIAGNOSTICO 7"
 				  && resp5 == Message.NO && resp6 == Message.NO && resp7 == Message.NO
 				  && resp8 == Message.NO, myMessage : message )
 	then
-		m.setMessage("DIAGNOSTICO 7");
+		m.setMessage("Demencia no especificada");
 end
 
 rule "DIAGNOSTICO 8"
 	when
 		m : Message( resp1 == Message.NO && resp3 == Message.SI && resp4 == Message.NO, myMessage : message )
 	then
-		m.setMessage("DIAGNOSTICO 8");
+		m.setMessage("Trastorno amnesico debido a una enfermedad medica");
 end
 
 rule "DIAGNOSTICO 9"
 	when
 		m : Message( resp1 ==  Message.NO && resp3 == Message.NO, myMessage : message )
 	then
-		m.setMessage("DIAGNOSTICO 9");
+		m.setMessage("No presenta tratorno");
 end
