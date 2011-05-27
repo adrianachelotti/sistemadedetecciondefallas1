@@ -60,7 +60,7 @@ public class MotroInferenciaDrools {
 		public static final int NO = 0;
 
 		private String message;
-		
+
 		private int[] respuestas; 
 		
 		private int resp1;
