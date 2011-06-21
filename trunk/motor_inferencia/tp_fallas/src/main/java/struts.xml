@@ -10,8 +10,8 @@
                   <result>/jsp/consulta1.jsp</result>                           
             </action>
             
-            <action name="DiagnosticarAction" class="action.DiagnosticarAction">
-                  <result>/jsp/resultado.jsp</result>                        
+            <action name="RespuestasAction" class="action.RespuestasAction">
+                  <result>result.jsp</result>                        
             </action>           
      
       </package>
