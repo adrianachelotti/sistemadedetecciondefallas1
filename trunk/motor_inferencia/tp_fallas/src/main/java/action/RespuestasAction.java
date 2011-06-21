@@ -24,11 +24,7 @@ public class RespuestasAction extends ActionSupport{
 		MotroInferenciaDrools mt = new MotroInferenciaDrools();
 
 		this.cargarRespuestas();
-		
-		for (int j=0; j<8; j++) {
-			System.out.println(resps[j]);
-		}
-		
+				
 		String resultado = mt.diagnosticar(resps);
 		//aca se tiene que pasar al jsp
 		@SuppressWarnings("rawtypes")
