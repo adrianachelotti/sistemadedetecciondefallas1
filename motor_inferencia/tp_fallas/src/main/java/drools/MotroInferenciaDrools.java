@@ -71,14 +71,6 @@ public class MotroInferenciaDrools {
 		private int resp6;
 		private int resp7;
 		private int resp8;
-		private int resp9;
-		private int resp10;
-		private int resp11;
-		private int resp12;
-		private int resp13;
-		private int resp14;
-		private int resp15;
-		private int resp16;
 		
 		public String getMessage() {
 			return this.message;
@@ -98,14 +90,6 @@ public class MotroInferenciaDrools {
 			this.resp6 = this.getRespuestaNumero(5);
 			this.resp7 = this.getRespuestaNumero(6);
 			this.resp8 = this.getRespuestaNumero(7);
-			this.resp9 = this.getRespuestaNumero(8);
-			this.resp10 = this.getRespuestaNumero(9);
-			this.resp11 = this.getRespuestaNumero(10);
-			this.resp12 = this.getRespuestaNumero(11);
-			this.resp13 = this.getRespuestaNumero(12);
-			this.resp14 = this.getRespuestaNumero(13);
-			this.resp15 = this.getRespuestaNumero(14);
-			this.resp16 = this.getRespuestaNumero(15);
 		}
 
 		public int[] getRespuestas() {
@@ -179,71 +163,6 @@ public class MotroInferenciaDrools {
 		public int getResp8() {
 			return resp8;
 		}
-
-		public void setResp9(int resp9) {
-			this.resp9 = resp9;
-		}
-
-		public int getResp9() {
-			return resp9;
-		}
-
-		public void setResp10(int resp10) {
-			this.resp10 = resp10;
-		}
-
-		public int getResp10() {
-			return resp10;
-		}
-
-		public void setResp11(int resp11) {
-			this.resp11 = resp11;
-		}
-
-		public int getResp11() {
-			return resp11;
-		}
-
-		public void setResp12(int resp12) {
-			this.resp12 = resp12;
-		}
-
-		public int getResp12() {
-			return resp12;
-		}
-
-		public void setResp13(int resp13) {
-			this.resp13 = resp13;
-		}
-
-		public int getResp13() {
-			return resp13;
-		}
-
-		public void setResp14(int resp14) {
-			this.resp14 = resp14;
-		}
-
-		public int getResp14() {
-			return resp14;
-		}
-
-		public void setResp15(int resp15) {
-			this.resp15 = resp15;
-		}
-
-		public int getResp15() {
-			return resp15;
-		}
-
-		public void setResp16(int resp16) {
-			this.resp16 = resp16;
-		}
-
-		public int getResp16() {
-			return resp16;
-		}
-		
 	}
 
 }
