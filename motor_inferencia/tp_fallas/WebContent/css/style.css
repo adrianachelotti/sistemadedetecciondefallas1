@@ -165,7 +165,7 @@ a.logo {
 /* ---- Background ---- */
 
 #titleheader_bg {
-	background:url("../images/header_bg.jpg") repeat-x ;
+	background:url("../images/header_bg.jpg");
 	height: 100px;
 	text-align: center;
 	border-bottom:1px solid #bbb;

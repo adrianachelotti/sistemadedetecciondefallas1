@@ -20,10 +20,10 @@
 <div id="navigation">
 		<ul>
 			<li><a href="index.html" title="Home">Home</a></li>
-			<li><a href="aboutus.htm" title="About Us">Acerca de Nosotros</a></li>
-			<li><a href="portfolio.htm" title="Portfolio">Inicio de Diagnostico</a></li>
-			<li><a href="services.htm" title="Services">Estadisticas</a></li>
-			<li><a href="contact.htm" title="Contact Us">Contactenos</a></li>
+			<li><a href="aboutus.htm" title="Nostros">Acerca de Nosotros</a></li>
+			<li><a href="portfolio.htm" title="Diagnostico">Inicio de Diagnostico</a></li>
+			<li><a href="services.htm" title="Estadisticas">Estadisticas</a></li>
+			<li><a href="contact.htm" title="Contacto">Contactenos</a></li>
 		</ul>
 		<div class="search">
 			<form name="search" method="post" action="">
@@ -62,8 +62,8 @@
 
 			<div class="sidebar_section">
 				<div class="sidebar_title">
-					<h4>Affiliates</h4>
-					<small>Subtitle w/ Information</small>
+					<h4>Afiliados</h4>
+					<small>Nuestros asociados</small>
 				</div>
 				<ul class="ads clearfix">
 						<li><a href="http://themeforest.net?ref=jdsans" target="_blank" title="ThemeForest"><img src="images/affiliates/themeforest.jpg" alt="ThemeForest" /></a></li>
@@ -75,24 +75,24 @@
 			<div class="sidebar_section">
 
 				<div class="sidebar_title">
-					<h4>About Us</h4>
-					<small>Subtitle w/ Information</small>
+					<h4>Nostros</h4>
+					<small>Un poco sobre nostros</small>
 				</div>
-				<p>Sed aliquet, augue at consequat porta, nisl nibh fringilla metus, at rutrum diam mauris nec enim. Curabitur odio leo, lacinia non imperdiet in, mollis id ante. Proin venenatis, metus at tristique ultrices, sapien orci blandit libero, a porta erat mauris quis est. </p>
-				<div class="sidebar_link"><a href="aboutus.htm" title="About Us">Learn More About Us</a></div>
+				<p>Sistemas Expertos S.A. es una empresa dedicada a la realización de sistemas expertos, basados en el estudio exaustivo de los conocimientos del experto presetando por nuestros clientes.</p>
+				<div class="sidebar_link"><a href="aboutus.htm" title="Nostros">Lee mas sobre nosotros</a></div>
 			</div>
 
 			<div class="sidebar_section" style="border-bottom: 0;">
 				<div class="sidebar_title">
-					<h4>Contact Us</h4>
-					<small>Subtitle w/ Information</small>
+					<h4>Contactenos</h4>
+					<small>Se consulta sera resuelta en 24 hrs</small>
 				</div>
-				<div class="left_column">Email:</div><div class="right_column">example@example.com</div>
-				<div class="left_column">Phone:</div><div class="right_column">123 - 456 - 7890</div>
+				<div class="left_column">Email:</div><div class="right_column">fallas1@sistemasexpertos.com.ar</div><br />
+				<div class="left_column">Telefono:</div><div class="right_column">011 - 4 - 456 - 7890</div><br />
 
-				<div class="left_column">Address:</div><div class="right_column">1234 Make Believe<br />New York, NY 50210<br /> United States of America</div>
+				<div class="left_column">Direccion:</div><div class="right_column">1234 Almagro<br />Ciudad Autonoma, CABA 50210<br /> Argentina</div>
 				<br style="clear: both;" />
-				<div class="sidebar_link"><a href="contact.htm" title="Contact Us">View Our Contact Page</a></div>
+				<div class="sidebar_link"><a href="contact.htm" title="Contacto">Mira nuestro Contacto</a></div>
 			</div>
 		</div>
 		<div class="spacer"></div>
@@ -101,7 +101,7 @@
 </div>
 
 <div id="footer">
-	&copy; Copyright 2009 GrayMatter - Magazine &amp; Portfolio.  All Rights Reserved.
+	&copy; Copyright 2011 Fallas 1 - FIUBA &amp; Diagnostico.  All Rights Reserved.
 </div>
 </body>
 </html>
