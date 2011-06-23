@@ -1,5 +1,98 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" >
+<script>
+function Abrir_ventana (pagina) {
+var opciones="toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=yes, width=508, height=365, top=85, left=140";
+window.open(pagina,"",opciones);
+}
+function ocultarPreguntas(index){
+	  var it;
+	  for (it=index;it<=8;it=it+1) {
+		  oculta('pregunta' + it);	
+		  var resp1 = document.getElementsByName('respuesta_'+it)[0];	  
+		  var resp2 = document.getElementsByName('respuesta_'+it)[1];
+		  resp1.checked=false;	  
+		  resp2.checked=false;	  
+	
+	  }
+}
+function ocultarEnfermedades(index,end){
+	  var it;
+	  for (it=index;it<=end;it=it+1) {
+		 oculta('e' + it);	
+	  }
+}
+function mostararEnfermedades(index,end){
+	  var it;
+	  for (it=index;it<=end;it=it+1) {
+		  muestra('e' + it);	
+	  }
+}
+function muestra(id){
+	var el = document.getElementById(id);
+	el.style.display = 'block'; 
+}
+function oculta(id){
+	var el = document.getElementById(id);
+	el.style.display = 'none'; 
+}
+<!-- Pregunta 1-->
+function ocultarYes1(){
+	mostararEnfermedades(1,8);
+	muestra('pregunta2') ;
+	ocultarPreguntas(3);
+	ocultarEnfermedades(3,8);
+
+}
+function ocultarNo1(){
+	mostararEnfermedades(1,8);
+	muestra('pregunta3');
+	oculta('pregunta2');
+	ocultarPreguntas(4);
+	ocultarEnfermedades(1,1);
+}
+<!-- Pregunta 3-->
+function ocultarYes3(){
+	mostararEnfermedades(1,8);
+	muestra('pregunta4') ;
+	ocultarPreguntas(5);
+	ocultarEnfermedades(1,1);
+	ocultarEnfermedades(8,8);
+
+}
+function ocultarNo3(){
+	mostararEnfermedades(1,8);
+	muestra('pregunta4') ;
+	ocultarPreguntas(5);
+	ocultarEnfermedades(1,7);
+}
+<!--Pregunta 4-->
+function ocultarYes4(){
+	mostararEnfermedades(1,8);
+	muestra('pregunta5') ;
+	ocultarPreguntas(5);
+	mostararEnfermedades(2,7);
+
+
+}
+function ocultarNo4(){
+	mostararEnfermedades(1,8);
+	ocultarPreguntas(5);
+	ocultarEnfermedades(1,7);
+}
+<!--Pregunta 5-->
+function ocultarYes5(){
+	mostararEnfermedades(1,8);
+	muestra('e2');
+
+}
+function ocultarNo5(){
+	mostararEnfermedades(1,8);
+	ocultarPreguntas(6);
+	ocultarEnfermedades(3,7);
+}
+</script>
+
 <head>
 	<title>Diagnostico</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -41,55 +134,60 @@
 				<div class="folioGallery">
 				<form action="RespuestasAction">
 					<div class="image_holder">
-						<div >
+						<div id="pregunta1">
 							<span>
-								<br></br>¿El paciente presenta <a href="#">alteraciones en la conciencia</a> y <a href="#"> cambios cognoscitivos</a>?
+								<br></br>¿El paciente presenta <a href="javascript:Abrir_ventana('popup_1.jsp?nroDef=0')">alteraciones en la conciencia</a> y <a href="javascript:Abrir_ventana('popup_1.jsp?nroDef=1')"> cambios cognoscitivos</a>?
 							</span>
 							<div >
-								<br></br>SI<input type="radio" name="respuesta_1" value="1"/>&nbsp;	NO<input type="radio" name="respuesta_1" value="0"/>
+								<br></br>SI<input type="radio" name="respuesta_1" value="1" onClick="javascript:ocultarYes1();"/>
+								&nbsp;	NO<input type="radio" name="respuesta_1" value="0" onClick="javascript:ocultarNo1();"/>
 							</div>					
 						</div>
-						<div>
+						<div id="pregunta2" style="display:none;">
 							<span>
-								<br></br>¿Las alteraciones tienen más de una <a href="#">etiología</a>?
+								<br></br>¿Las alteraciones tienen más de una <a href="javascript:Abrir_ventana('popup_1.jsp?nroDef=2')">etiología</a>?
 							</span>
 							<div>
-								<br></br>Más de una<input type="radio" name="respuesta_2" value="1"/>&nbsp;	Una<input type="radio" name="respuesta_2" value="0"/>
+								<br></br>Más de una<input type="radio" name="respuesta_2" value="1"/>&nbsp;	
+								Una<input type="radio" name="respuesta_2" value="0"/>
 							</div>
 						</div>
-						<div>
+						<div id="pregunta3" style="display:none;">
 							<span>
-								<br></br>¿Presenta  <a href="#">deterioro de la memoria</a> ?
+								<br></br>¿Presenta  <a href="javascript:Abrir_ventana('popup_1.jsp?nroDef=3')">deterioro de la memoria</a> ?
 							</span>
 							<div>
-								<br></br>SI<input type="radio" name="respuesta_3" value="1"/>&nbsp;	NO<input type="radio" name="respuesta_3" value="0"/>
+								<br></br>SI<input type="radio" name="respuesta_3" value="1" onClick="javascript:ocultarYes3();"/>&nbsp;	
+								NO<input type="radio" name="respuesta_3" value="0" onClick="javascript:ocultarNo3();"/>
 							</div>
 						</div>
-						<div>
+						<div id="pregunta4" style="display:none;">
 							<span>
-								<br></br>¿Tiene un <a href="#">déficit cognoscitivo adicional </a> ?
+								<br></br>¿Tiene un <a href="javascript:Abrir_ventana('popup_1.jsp?nroDef=4">déficit cognoscitivo adicional </a> ?
 							</span>
 							<div >
-								<br></br>SI<input type="radio" name="respuesta_4" value="1"/>&nbsp;	NO<input type="radio" name="respuesta_4" value="0"/>
+								<br></br>SI<input type="radio" name="respuesta_4" value="1" onClick="javascript:ocultarYes4();"/>&nbsp;
+									NO<input type="radio" name="respuesta_4" value="0" onClick="javascript:ocultarNo4();"/>
 							</div>
 						</div>
-						<div>
+						<div id="pregunta5" style="display:none;">
 							<span>
-								<br></br>¿Las alteraciones tienen más de una <a href="#">etiología</a>?
+								<br></br>¿Las alteraciones tienen más de una <a href="javascript:Abrir_ventana('popup_1.jsp?nroDef=2">etiología</a>?
 							</span>
 							<div>
-								<br></br>Más de una<input type="radio" name="respuesta_5" value="1"/>&nbsp;	Una<input type="radio" name="respuesta_5" value="0"/>
+								<br></br>Más de una<input type="radio" name="respuesta_5" value="1" onClick="javascript:ocultarYes5"/>&nbsp;	
+								Una<input type="radio" name="respuesta_5" value="0" onClick="javascript:ocultarNo5();"/>
 							</div>
 						</div>
-						<div>
+						<div id="pregunta6" style="display:none;">
 							<span>
-								<br></br>¿Evidencia  que la <a href="#">enfermedad cerebro vascular</a> está etológicamente <br></br>relacionada con la alteración?
+								<br></br>¿Evidencia  que la <a href="javascript:Abrir_ventana('popup_1.jsp?nroDef=6">enfermedad cerebro vascular</a> está etológicamente <br></br>relacionada con la alteración?
 							</span>
 							<div>
 								<br></br>SI<input type="radio" name="respuesta_6" value="1"/>&nbsp;	NO<input type="radio" name="respuesta_6" value="0"/>
 							</div>
 						</div>
-						<div>
+						<div id="pregunta7" style="display:none;">
 							<span>
 								<br></br>	¿La  alteración se debe a una <a href="#">enfermedad del sistema nervioso central</a> o a una <a href="#">enfermedad sistémica que casusa la demencia</a>?
 							</span>
@@ -97,7 +195,7 @@
 								<br></br>SI<input type="radio" name="respuesta_7" value="1"/>&nbsp;	NO<input type="radio" name="respuesta_7" value="0"/>
 							</div>
 						</div>
-						<div>
+						<div id="pregunta8" style="display:none;">
 							<span>
 								<br></br>  ¿La alteración presenta un comienzo gradual y un <a href="#"> cognoscitivo continuo</a>?
 							</span>
@@ -109,14 +207,14 @@
 				<div class="discription">
 					<h3>Trastornos Medicios </br> Debido a Enfermedades Medicas</h3>
 					<ul class="details">
-					<li>Demencia debido a una enfermedad medica</li>
-					<li>Demencia Tipo Alzheimer</li>
-					<li>Trastorno amnésico debido a una enfermedad medica</li>
-					<li>Demencia No Específicada</li>
-					<li>Demencia vascular</li>
-					<li>Delirium debido a múltiples etiologías</li>
-					<li>Delirium debido a múltiples etiologías</li>
-					<li>Delirium debido a una enfermedad médica</li>
+					<div id="e1">	<li>Delirium debido a una enfermedad médica</li></div>
+					<div id="e2"><li>Delirium debido a múltiples etiologías</li></div>
+					<div id="e3"><li>Demencia vascular </li></div>
+					<div id="e4"><li>Demencia debido a una enfermedad medica /li></div>
+					<div id="e5"><li>Demencia vascular</li></div>
+					<div id="e6"><li>Demencia Tipo Alzehimer </li></div>
+					<div id="e7"><li>Demencia No Específicada</li></div>
+					<div id="e8"><li>Trastorno amnésico debido a una enfermedad medica</li></div>
 					</ul>
 					<p>Posibles Diagnosticos segun la respuestas elegidas</p>
 				</div>
