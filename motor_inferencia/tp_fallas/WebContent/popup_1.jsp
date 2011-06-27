@@ -6,16 +6,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></meta>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
 <title>Definición</title>
 </head>
-<body>
-<div class="image_holder">
+<body  >
+
 <%
 int indice = Integer.parseInt(request.getParameter("nroDef"));
 String titulo = def.getTitulo(indice);
+String explicacion = def.getDefinicion(indice);
 %>
-<%=titulo%>
-</div>
+<div id="container">
+
+
+<table border="1" width="400" cellpadding="0" cellspacing="0" height="200" style="display:inline;">
+<tr height="20"><td>Concepto</td><td ><%=titulo%></td></tr>
+<tr><td colspan="2"><%=explicacion%></td></tr>
+</table>
+
+
+ </div>
 </body>
 </html>
