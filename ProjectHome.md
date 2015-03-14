@@ -1,0 +1,1 @@
+repositorio que contiene material para el desarrollo del trabajo práctico de la materia Sistemas Automáticos de Diagnóstico y Detección de Fallas I.
